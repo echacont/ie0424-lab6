@@ -16,7 +16,7 @@ static void putuint2(uint32_t i) {
 
 
 uint32_t *irq(uint32_t *regs, uint32_t irqs) {
-    global_counter += 5;
+    global_counter += 1;
     putuint(global_counter);
     return regs;
 }
@@ -28,7 +28,7 @@ void main() {
 
 	while (1) {
 		counter = 0;
-		//putuint(number_to_display);
+		putuint(number_to_display);
 		number_to_display++;
 		while (counter < LOOP_WAIT_LIMIT) {
 			counter++;
